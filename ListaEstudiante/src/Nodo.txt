@@ -1,0 +1,63 @@
+public boolean buscarCedula(int cedula){
+        
+    NodoEst p = punta;
+    
+    p.setCedula(cedula);
+
+    while (p != null){
+        p = p.getLiga();
+    }
+    return p!=null;
+    
+}
+
+ public boolean buscarCedula(int cedula){
+        
+        NodoEst p = punta;
+        boolean band = false; 
+        
+    
+        while (p != null){
+
+            if(p.getCedula()==cedula){
+                band = true;
+            }
+
+            p = p.getLiga();
+        }
+        return band;
+        
+    }
+
+
+public boolean buscarCedula(int cedula){
+        
+    NodoEst elemento = punta;
+    elemento.setCedula(cedula);
+    while (elemento != null && elemento.getCedula() != cedula){
+        elemento = elemento.getLiga();
+    }
+    return elemento!=null;
+    
+}
+
+
+
+ public void buscarCedula(int cedula){
+        
+        NodoEst p = punta;
+        
+        p.setCedula(cedula);
+
+        while (p != null && p.getCedula() != cedula ){
+            if(p.next == null){
+                System.out.println("La cedula no existe");
+                
+            }
+            p = p.getLiga();
+        }
+        return p;
+
+        
+        
+    }
